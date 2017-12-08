@@ -1,0 +1,21 @@
+{
+    "name": "georgy-server",
+    "version": "1.0.0",
+    "private": true,
+    "main": "server.js",
+    "dependencies": {
+        "express": "latest",
+        "express-session": "latest",
+        "ejs": "latest",
+        "passport": "latest",
+        "passport-local": "latest",
+        "connect-flash": "latest",
+        "bcrypt-nodejs": "latest",
+        "sqlite3": "latest",
+        "morgan": "latest",
+        "body-parser": "latest",
+        "cookie-parser": "latest",
+        "method-override": "latest",
+        "process": "latest"
+    }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>You are logged in!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+     integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        body { padding-top:80px }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1>You are logged in!</h1>
+
+        <% if (typeof message != 'undefined' && message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+        
+        <a href="/logout" class="btn btn-default">Logout</a>
+    </div>
+
+    <div class="jumbotron">        
+        <div class="col-sm-6">
+            <div class="well">
+                <h3>Last 5 logins happened at:</h3>
+                <ul>
+                    <% timestamps.forEach(function(timestamp) { %>
+                        <li ><%= timestamp %> </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
